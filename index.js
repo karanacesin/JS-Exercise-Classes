@@ -84,13 +84,8 @@ class Car {
   drive(distance){
     this.odometer= this.odometer + distance;
     this.tank= (this.tank * this.milesPerGallon - distance) / this.milesPerGallon;
+    
    }
-
-   toString(){
-    if(this.tank === 0){
-      return `I ran out of fuel at ${this.odometer} miles.`
-    }
-    }
 
 }
 
@@ -168,10 +163,9 @@ class Student extends Lambdasian {
     super(att);
     this.previousBackground = att.previousBackground;
     this.className = att.className;
-    this.favSubjects = [];
+    this.favSubjects = att.favSubjects;
   }
   listSubjects(){
-    this.favSubjects.push();
     return `${this.favSubjects}`;
   }
     
